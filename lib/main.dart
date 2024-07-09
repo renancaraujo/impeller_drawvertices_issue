@@ -68,7 +68,11 @@ class Painter extends CustomPainter {
         textureCoordinates: Float32List.fromList(triangles1),
       ),
       BlendMode.srcOver,
-      Paint()..shader = (shader),
+      Paint()
+        ..shader = (shader
+          ..setFloatUniforms(
+            (u) => u.setSize(size),
+          )),
     );
 
     List<double> triangles2 = [
@@ -87,7 +91,11 @@ class Painter extends CustomPainter {
         textureCoordinates: Float32List.fromList(triangles2),
       ),
       BlendMode.srcOver,
-      Paint()..shader = shader,
+      Paint()
+        ..shader = (shader
+          ..setFloatUniforms(
+            (u) => u.setSize(size),
+          )),
     );
 
     List<double> triangles3 = [
@@ -106,7 +114,11 @@ class Painter extends CustomPainter {
         textureCoordinates: Float32List.fromList(triangles3),
       ),
       BlendMode.srcOver,
-      Paint()..shader = (shader),
+      Paint()
+        ..shader = (shader
+          ..setFloatUniforms(
+            (u) => u.setSize(size),
+          )),
     );
 
     List<double> triangles4 = [
@@ -125,7 +137,11 @@ class Painter extends CustomPainter {
         textureCoordinates: Float32List.fromList(triangles4),
       ),
       BlendMode.srcOver,
-      Paint()..shader = (shader),
+      Paint()
+        ..shader = (shader
+          ..setFloatUniforms(
+            (u) => u.setSize(size),
+          )),
     );
   }
 

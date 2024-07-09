@@ -6,9 +6,10 @@ precision lowp float;
 
 uniform vec2 uSize;
 
+
 out vec4 fragColor;
 void main() { 
-    vec2 pos = FlutterFragCoord().xy;
+    vec2 pos = FlutterFragCoord().xy / uSize;
 
-    fragColor = vec4(1.0, 0.0, 1.0, 1.0);
+    fragColor = vec4(1.0, 0.0, 0.0, pos.y + 1.0 - pos.y);
 }
